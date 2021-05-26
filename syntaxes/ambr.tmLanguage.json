@@ -1,0 +1,51 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Syrupy Amber",
+	"patterns": [
+		{
+			"include": "#test-properties"
+		},
+    {
+      "include": "#test-snapshot"
+    },
+    {
+      "include": "#test-separator"
+    }
+	],
+	"repository": {
+    "test-properties": {
+      "patterns": [{
+        "contentName": "expression.property-group",
+        "begin": "^#",
+        "end": "$",
+        "patterns": [{
+          "name": "keyword.control.name",
+          "match": "name:"
+        }]
+      }]
+    },
+    "test-separator": {
+      "patterns": [{
+        "name": "string.unquoted.separator",
+        "match": "^---$"
+      }]
+    },
+    "test-snapshot": {
+      "patterns": [{
+        "contentName": "expression.snapshot-line",
+        "begin": "^  ",
+        "end": "$",
+        "patterns": [{
+          "include": "#snapshot-line"
+        }]
+      }]
+    },
+    "snapshot-line": {
+      "patterns": [{
+        "name": "string.unquoted.content",
+        "match": ".*"
+      }]
+    }
+	},
+	"scopeName": "source.ambr"
+}

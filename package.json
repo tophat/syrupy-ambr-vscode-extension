@@ -1,0 +1,34 @@
+{
+    "name": "syrupy-ambr",
+    "displayName": "syrupy-ambr",
+    "description": "Language support for Syrupy's amber snapshot format",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "ambr",
+                "aliases": [
+                    "Syrupy Amber",
+                    "ambr"
+                ],
+                "extensions": [
+                    ".ambr"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ambr",
+                "scopeName": "source.ambr",
+                "path": "./syntaxes/ambr.tmLanguage.json"
+            }
+        ]
+    }
+}
