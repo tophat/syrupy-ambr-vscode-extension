@@ -4,7 +4,7 @@
     "description": "Language support for Syrupy's amber snapshot format",
     "version": "0.0.1",
     "engines": {
-        "vscode": "^1.56.0"
+        "vscode": "^1.66.2"
     },
     "categories": [
         "Programming Languages"
@@ -30,5 +30,6 @@
                 "path": "./syntaxes/ambr.tmLanguage.json"
             }
         ]
-    }
+    },
+    "packageManager": "yarn@3.2.0"
 }

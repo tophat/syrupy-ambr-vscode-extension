@@ -32,18 +32,19 @@
     },
     "test-snapshot": {
       "patterns": [{
-        "contentName": "expression.snapshot-line",
+        "contentName": "expression.snapshot-expression",
         "begin": "^  ",
-        "end": "$",
-        "patterns": [{
-          "include": "#snapshot-line"
-        }]
+        "end": "^#",
+        "patterns": [
+          { "include": "#python-like-expression" }
+        ]
       }]
     },
-    "snapshot-line": {
+    "python-like-expression": {
       "patterns": [{
-        "name": "string.unquoted.content",
-        "match": ".*"
+        "contentName": "expression.pylike-object",
+        "begin": "[^\\(]+\\(",
+        "end": "\\)"
       }]
     }
 	},
